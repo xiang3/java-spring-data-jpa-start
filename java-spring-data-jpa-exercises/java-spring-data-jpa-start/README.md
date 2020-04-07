@@ -10,7 +10,7 @@
 测试内容在： PersonRepositoryTest 
 ---
 
-###spring data jpa entity数据对象继承和数据表映射操作：
+### spring data jpa entity数据对象继承和数据表映射操作：
 对于entity对象继承，@Inheritance注解 
 - InheritanceType.SINGLE_TABLE （默认）会将子类和父类聚合到同一张表中，全部创建新的字段。 
 - InheritanceType.TABLE_PER_CLASS 每个类创建一个表，每个表之间相互独立 
