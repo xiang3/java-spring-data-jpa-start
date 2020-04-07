@@ -2,7 +2,10 @@ package com.example.demo.model;
 
 import javax.persistence.*;
 
+import static javax.persistence.InheritanceType.TABLE_PER_CLASS;
+
 @Entity
+@Inheritance(strategy=TABLE_PER_CLASS)
 public class Person {
     @Id
     @GeneratedValue
@@ -13,6 +16,7 @@ public class Person {
 
     private Integer age=0;
 
+    @Enumerated(EnumType.ORDINAL)
     private Sex sex = Sex.MALE;
 
     public Person(String name, Integer age, Sex sex) {
