@@ -2,10 +2,9 @@ package com.example.demo.model;
 
 import javax.persistence.*;
 
-import static javax.persistence.InheritanceType.TABLE_PER_CLASS;
-
 @Entity
-@Inheritance(strategy=TABLE_PER_CLASS)
+@Inheritance(strategy=InheritanceType.JOINED)
+@DiscriminatorColumn(name="country", discriminatorType = DiscriminatorType.STRING, length = 20)
 public class Person {
     @Id
     @GeneratedValue

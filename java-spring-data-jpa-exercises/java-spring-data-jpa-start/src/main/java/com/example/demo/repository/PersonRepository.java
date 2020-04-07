@@ -17,4 +17,6 @@ public interface PersonRepository extends JpaRepository<Person, Integer> {
     public List<Person> getAllByGrowmUpStudentOrderByAge();
 
     public List<Person> getBySexEquals(@Param("sex") Sex sex);
+
+    public List<Person> getByAgeEquals(Integer age);
 }
