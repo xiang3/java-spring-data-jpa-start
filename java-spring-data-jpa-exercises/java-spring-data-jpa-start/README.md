@@ -7,7 +7,7 @@
 - 新建Entity对象 Person，设置属性@Id主键，@Column其余属性
 - 设置Repository接口，自定义接口方法：findById, readByAge等
 - 使用jpa生成的Repositery对象对数据表进行操作
-测试内容在： PersonRepositoryTest 
+- 测试内容在： PersonRepositoryTest 
 ---
 
 ### spring data jpa entity数据对象继承和数据表映射操作：
@@ -21,3 +21,9 @@
     - 子类programmer @DiscriminatorValue(value="programmer") 
     - 子类Student @DiscriminatorValuer(value="student")
 - 会给person表中加一个字段为type, 而programmer数据type字段赋值为programmer, student中的type数据为student. 进行数据区分。
+- 测试内容在ProgrammerRepositoryTest, StudentRepositoryTest中
+---
+
+### pageRequest使用：
+- 通过pageRequest对象可以对数据进行分页，数据对象默认需要pageable对象进行分页，PageRequest对象是Pageable 的子类。可以完成分页查询数据的功能
+- 测试数据在PageableSqlTest中
