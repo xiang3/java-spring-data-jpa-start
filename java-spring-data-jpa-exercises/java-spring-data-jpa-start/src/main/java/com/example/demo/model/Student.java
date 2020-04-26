@@ -12,6 +12,9 @@ public class Student extends Person {
     @Column(nullable = false, name = "class_room")
     private Integer classRoom;
 
+    @ManyToOne(cascade = CascadeType.ALL)
+    private Teacher teacher;
+
     public Student(String name, Integer age, Sex sex, Grade grade, Integer classRoom) {
         super(name, age, sex);
         this.grade = grade;
